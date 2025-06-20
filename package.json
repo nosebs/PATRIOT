@@ -1,0 +1,16 @@
+{
+  "name": "patriot",
+  "module": "index.ts",
+  "scripts": {
+    "build": "bun build --target=bun --outfile=dist/script.js index.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/frida-gum": "^19.0.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "private": true,
+  "type": "module"
+}
