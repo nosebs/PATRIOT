@@ -8,21 +8,12 @@ export class DisableForcedLoginPatch extends Patch {
     }
 
     enableForcedLogin() {
-        this.mandatoryLoginService.enableForcedLogin.overload("boolean").implementation = () => {
-            console.log('enableForcedLogin')
-            return false
-        }
+        this.mandatoryLoginService.enableForcedLogin.overload("boolean").implementation = () => false
     }
     shouldShowForcedLogin() {
-        this.mandatoryLoginService.shouldShowForcedLogin.overload("boolean").implementation = () => {
-            console.log('shouldShowForcedLogin')
-            return false
-        }
+        this.mandatoryLoginService.shouldShowForcedLogin.overload("boolean").implementation = () => false
     }
     shouldShowLoginTabFirst() {
-        this.mandatoryLoginService.shouldShowLoginTabFirst.overload().implementation = () => {
-            console.log('shouldShowLoginTabFirst')
-            return false
-        }
+        this.mandatoryLoginService.shouldShowLoginTabFirst.overload().implementation = () => false
     }
 }

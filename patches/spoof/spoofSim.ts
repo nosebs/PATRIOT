@@ -1,5 +1,10 @@
 import { Patch } from "../patch";
 export class SpoofSimPatch extends Patch {
+
+    simCountry = "KZ"
+    simMCCMNC = "40177"
+    simOperator = "MTS"
+
     telephonyManager = Java.use("android.telephony.TelephonyManager")
     override patch() {
         this.getSimCountryIso()
@@ -12,50 +17,29 @@ export class SpoofSimPatch extends Patch {
     }
 
     getSimCountryIso() {
-        this.telephonyManager.getSimCountryIso.overload().implementation = () => {
-            console.log('getSimCountryIso')
-            return "KZ"
-        }
+        this.telephonyManager.getSimCountryIso.overload().implementation = () => this.simCountry
     }
 
     getNetworkCountryIso() {
-        this.telephonyManager.getNetworkCountryIso.overload().implementation = () => {
-            console.log('getNetworkCountryIso')
-            return "KZ"
-        }
+        this.telephonyManager.getNetworkCountryIso.overload().implementation = () => this.simCountry
     }
     getNetworkCountryIso2() {
-        this.telephonyManager.getNetworkCountryIso.overload('int').implementation = () => {
-            console.log('getNetworkCountryIso2')
-            return "KZ"
-        }
+        this.telephonyManager.getNetworkCountryIso.overload('int').implementation = () => this.simCountry
     }
 
     getSimOperator() {
-        this.telephonyManager.getSimOperator.overload().implementation = () => {
-            console.log('getSimOperator')
-            return "40177" //401	77	40177	Asia and the Middle East	Kazakhstan	KZ	MTS	Tele2.kz	KAZ77	GSM 900 / GSM 1800 / UMTS 900
-        }
+        this.telephonyManager.getSimOperator.overload().implementation = () => this.simMCCMNC
     }
 
     getNetworkOperator() {
-        this.telephonyManager.getNetworkOperator.overload().implementation = () => {
-            console.log('getNetworkOperator')
-            return "40177"
-        }
+        this.telephonyManager.getNetworkOperator.overload().implementation = () => this.simMCCMNC
     }
 
     getSimOperatorName() {
-        this.telephonyManager.getSimOperatorName.overload().implementation = () => {
-            console.log('getSimOperatorName')
-            return "MTS"
-        }
+        this.telephonyManager.getSimOperatorName.overload().implementation = () => this.simOperator
     }
 
     getNetworkOperatorName() {
-        this.telephonyManager.getNetworkOperatorName.overload().implementation = () => {
-            console.log('getNetworkOperatorName')
-            return "MTS"
-        }
+        this.telephonyManager.getNetworkOperatorName.overload().implementation = () => this.simOperator
     }
 }

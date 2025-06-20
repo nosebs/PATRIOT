@@ -6,8 +6,6 @@ export class NoWatermarkPatch extends Patch {
     }
 
     getTranscode() {
-        this.aclCommonShare.getTranscode.overload().implementation = () => {
-            return 1
-        }
+        this.aclCommonShare.getTranscode.overload().implementation = () => 1 //Remote watermark
     }
 }

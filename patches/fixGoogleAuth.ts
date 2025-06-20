@@ -7,13 +7,7 @@ export class FixGoogleAuthPatch extends Patch {
     }
 
     isAvailable() {
-        this.googleAuth.isAvailable.overload().implementation = () => {
-            console.log('isAvailable')
-            return false
-        }
-        this.googleOnetapAuth.isAvailable.overload().implementation = () => {
-            console.log('isAvailable2')
-            return false
-        }
+        this.googleAuth.isAvailable.overload().implementation = () => false
+        this.googleOnetapAuth.isAvailable.overload().implementation = () => false
     }
 }
