@@ -1,3 +1,5 @@
+import Java from "frida-java-bridge";
+
 import { SpoofSimPatch } from "./patches/spoof/spoofSim";
 
 import { DisableForcedLoginPatch } from "./patches/disableForcedLogin";

@@ -1,12 +1,17 @@
 {
   "name": "patriot",
   "module": "index.ts",
+  "main": "agent/index.ts",
   "scripts": {
-    "build": "bun build --target=bun --outfile=dist/script.js index.ts"
+    "build": "frida-compile agent/index.ts -o _agent.js -c",
+    "watch": "frida-compile agent/index.ts -o _agent.js -w"
   },
   "devDependencies": {
     "@types/bun": "latest",
-    "@types/frida-gum": "^19.0.0"
+    "@types/frida-gum": "^19.0.0",
+    "@types/node": "^24.0.3",
+    "frida-compile": "^19.0.4",
+    "frida-java-bridge": "^7.0.4"
   },
   "peerDependencies": {
     "typescript": "^5"

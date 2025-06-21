@@ -1,4 +1,6 @@
 import { Patch } from "./patch";
+import Java from "frida-java-bridge";
+
 export class DisableForcedLoginPatch extends Patch {
     mandatoryLoginService = Java.use("com.ss.android.ugc.aweme.services.MandatoryLoginService")
     override patch() {
