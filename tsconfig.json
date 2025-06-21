@@ -5,7 +5,7 @@
       "esModuleInterop": false,
       "moduleResolution": "bundler",
       "allowJs": true,
-      "strict": true,
+      "strict": false,
       "sourceMap": false
   },
   "exclude": ["dist"],
