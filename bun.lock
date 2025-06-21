@@ -5,10 +5,9 @@
       "name": "patriot",
       "devDependencies": {
         "@types/bun": "latest",
-        "@types/frida-gum": "^19.0.0",
+        "@types/frida-gum": "18.5.1",
         "@types/node": "^24.0.3",
         "frida-compile": "^19.0.4",
-        "frida-java-bridge": "^7.0.4",
       },
       "peerDependencies": {
         "typescript": "^5",
@@ -22,7 +21,7 @@
 
     "@types/bun": ["@types/bun@1.2.16", "", { "dependencies": { "bun-types": "1.2.16" } }, "sha512-1aCZJ/6nSiViw339RsaNhkNoEloLaPzZhxMOYEa7OzRzO41IGg5n/7I43/ZIAW/c+Q6cT12Vf7fOZOoVIzb5BQ=="],
 
-    "@types/frida-gum": ["@types/frida-gum@19.0.0", "", {}, "sha512-qViK1KwvPEAkajwSUv0wpZvZLiX8xO4JFFCh8dfYZfzSyOEfoE0KliCP/nJSKIKG6N3hXnPowrvPufjs5fLKAA=="],
+    "@types/frida-gum": ["@types/frida-gum@18.5.1", "", {}, "sha512-99geyCbWB+YBCqxcO+ue7dJUQJti7kQ5CHGQtKoz0ENtRswKULGMFKW6QgL657sMiztqhcDHWJjYSPv5GKT1ig=="],
 
     "@types/node": ["@types/node@24.0.3", "", { "dependencies": { "undici-types": "~7.8.0" } }, "sha512-R4I/kzCYAdRLzfiCabn9hxWfbuHS573x+r0dJMkkzThEa7pbrcDWK+9zu3e7aBOouf+rQAciqPFMnxwr0aWgKg=="],
 
@@ -57,8 +56,6 @@
     "frida": ["frida@17.2.4", "", { "dependencies": { "bindings": "^1.5.0", "minimatch": "^10.0.1", "prebuild-install": "^7.1.3" } }, "sha512-khSAkzUrZtY4aOqeS+sR5hjwP2oNINMGD2wOPCTRcddoBSyBqEwI8Lr3wm01/QnMqdamrTpKx4qSr0MJsuov0A=="],
 
     "frida-compile": ["frida-compile@19.0.4", "", { "dependencies": { "chalk": "^5.4.1", "commander": "^14.0.0", "frida": "^17.1.2" }, "bin": { "frida-compile": "dist/cli.js" } }, "sha512-QGTHsV65HDI+z9etpzJLammqMBDN1TItZxiVTxU6HDPgfIshbIkzpbF8khHuxn1cIxtWYsd+DgtW7UlMTaB76A=="],
-
-    "frida-java-bridge": ["frida-java-bridge@7.0.4", "", {}, "sha512-dE5XCvasUwA/wiVb5gSwBPf6dortI8VtD0qLlw2T0ryqX/0lg4BEtEkg1oRr9IlHDVBTjPOqe9KRzdPar8U3EQ=="],
 
     "fs-constants": ["fs-constants@1.0.0", "", {}, "sha512-y6OAwoSIf7FyjMIv94u+b5rdheZEjzR63GTyZJm5qh4Bi+2YgwLCcI/fPFZkL5PSixOt6ZNKm+w+Hfp/Bciwow=="],
 

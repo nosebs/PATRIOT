@@ -1,5 +1,5 @@
 import { Patch } from "../patch";
-import Java from "frida-java-bridge";
+
 
 export class SpoofSimPatch extends Patch {
 

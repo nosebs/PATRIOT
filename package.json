@@ -1,21 +1,19 @@
 {
   "name": "patriot",
-  "module": "index.ts",
   "main": "agent/index.ts",
-  "scripts": {
-    "build": "frida-compile agent/index.ts -o _agent.js -c",
-    "watch": "frida-compile agent/index.ts -o _agent.js -w"
-  },
+  "module": "index.ts",
   "devDependencies": {
     "@types/bun": "latest",
-    "@types/frida-gum": "^19.0.0",
+    "@types/frida-gum": "18.5.1",
     "@types/node": "^24.0.3",
-    "frida-compile": "^19.0.4",
-    "frida-java-bridge": "^7.0.4"
+    "frida-compile": "^19.0.4"
   },
   "peerDependencies": {
     "typescript": "^5"
   },
   "private": true,
+  "scripts": {
+    "build": "frida-compile index.ts -o _agent.js -c"
+  },
   "type": "module"
 }

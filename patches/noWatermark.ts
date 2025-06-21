@@ -1,5 +1,4 @@
 import { Patch } from "./patch";
-import Java from "frida-java-bridge";
 
 export class NoWatermarkPatch extends Patch {
     aclCommonShare = Java.use("com.ss.android.ugc.aweme.feed.model.ACLCommonShare")
