@@ -5,6 +5,7 @@ import { DisableForcedLoginPatch } from "./patches/disableForcedLogin";
 import { FixGoogleAuthPatch } from "./patches/fixGoogleAuth";
 import { NoWatermarkPatch } from "./patches/noWatermark";
 import { RemoveDownloadRestrictionsPatch } from "./patches/removeDownloadRestrictions";
+import { FeedFilterPatch } from "./patches/filter/feedFilter";
 console.log("Hello via Bun!");
 
 Java.perform(() => [
@@ -13,5 +14,5 @@ Java.perform(() => [
     new FixGoogleAuthPatch(),
     new NoWatermarkPatch(),
     new RemoveDownloadRestrictionsPatch(),
-    //new FeedFilterPatch()
+    new FeedFilterPatch()
 ].forEach((patch) => patch.patch()))
